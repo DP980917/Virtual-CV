@@ -22,12 +22,12 @@ This static website includes:
 
 ## 📁 Folder Contents
 
-Profile-Website/
-├── index.html
-├── style.css
-├── profile.jpg
-├── Maseko_Dikeledi_CV.zip
-└── README.md
+Profile-Website
+- index.html
+- style.css
+- profile.jpg
+- Maseko_Dikeledi_CV.zip
+- README.md
 
 
 ## 🔧 Setup Instructions
