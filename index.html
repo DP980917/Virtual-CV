@@ -14,6 +14,11 @@
   <header>
     <h1>Maseko Dikeledi</h1>
     <p>Problem Solver | Creative Thinker | Lifelong Learner</p>
+    
+    <button id="theme-toggle" class="theme-toggle">
+    <i class="fas fa-moon"></i> Dark Mode
+    </button>
+
     <nav>
       <a href="#about">About</a>
       <a href="#resume">Resume</a>
@@ -23,6 +28,11 @@
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
+    
+    <button id="theme-toggle" class="theme-toggle">
+    <i class="fas fa-moon"></i> Dark Mode
+    </button>
+
   </header>
 
   <section id="about">
@@ -123,5 +133,30 @@
     <p>Copyright © 2025 Maseko Dikeledi. All Rights Reserved.</p>
   </footer>
 
+  <script>
+    const toggleButton = document.getElementById("theme-toggle");
+    const body = document.body;
+
+    // Check saved mode from localStorage
+    if (localStorage.getItem("theme") === "dark") {
+      body.classList.add("dark-mode");
+      toggleButton.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+    }
+
+    toggleButton.addEventListener("click", () => {
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        localStorage.setItem("theme", "dark");
+        toggleButton.innerHTML = '<i class="fas fa-sun"></i> Light Mode';
+      } else {
+        localStorage.setItem("theme", "light");
+        toggleButton.innerHTML = '<i class="fas fa-moon"></i> Dark Mode';
+      }
+    });
+  </script>
+
+
 </body>
+
 </html>
