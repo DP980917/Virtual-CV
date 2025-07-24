@@ -172,3 +172,8 @@ body.dark-mode footer {
   background: #1f1f1f;
   color: #ccc;
 }
+
+body {
+  transition: background-color 0.4s, color 0.4s;
+}
+
